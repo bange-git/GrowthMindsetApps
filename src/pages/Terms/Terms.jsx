@@ -11,7 +11,7 @@ function Terms() {
           Application Terms and Conditions
         </h1>
         <h4 className="text-lg font-poppins text-center pb-10">
-          Last updated December 29, 2024
+          Last updated January 5th, 2025
         </h4>
         <p className="text-dark2 text-center font-light pb-10">
           These terms and conditions applies to the Mobile applications (hereby
@@ -167,7 +167,11 @@ function Terms() {
           <p className="font-light ">
             If you have any questions regarding privacy while using the APPS, or
             have questions about the practices, please contact the Service
-            Provider via email at sebastienbange@gmail.com.
+            Provider{" "}
+            <a className="" href="/feedback">
+              <button className="primary-btn">here</button>
+            </a>{" "}
+            or send email via sebastienbange@gmail.com.
           </p>
         </section>
       </div>

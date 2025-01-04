@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
-import { motion } from "motion/react";
+import { IoMdClose } from "react-icons/io"; // Import close icon
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const NavbarMenu = [
@@ -20,19 +21,23 @@ const NavbarMenu = [
     path: "/privacy",
   },
 ];
+
 const Navbar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
-    <nav className="relative z-20">
+    <nav className="relative z-20 bg-white shadow-md">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
-        className="container py-10 flex justify-between items-center"
+        className="container py-6 flex justify-between items-center"
       >
         {/* Logo section */}
         <div>
-          <h1 className="font-bold text-2xl">Growth Mindset Apps</h1>
+          <h1 className="font-bold text-2xl">Growth Mindset</h1>
         </div>
-        {/* Menu section */}
+
+        {/* Desktop Menu */}
         <div className="hidden lg:block">
           <ul className="flex items-center gap-3">
             {NavbarMenu.map((menu) => (
@@ -46,14 +51,58 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <button className="primary-btn">Get In Touch</button>
+            <a href="/feedback">
+              <button className="primary-btn">Get In Touch</button>
+            </a>
           </ul>
         </div>
-        {/* Mobile Hamburger menu section */}
+
+        {/* Mobile Hamburger Menu */}
         <div className="lg:hidden">
-          <IoMdMenu className="text-4xl" />
+          {isMobileMenuOpen ? (
+            <IoMdClose
+              className="text-4xl cursor-pointer"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+          ) : (
+            <IoMdMenu
+              className="text-4xl cursor-pointer"
+              onClick={() => setIsMobileMenuOpen(true)}
+            />
+          )}
         </div>
       </motion.div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          className="lg:hidden bg-white shadow-md"
+        >
+          <ul className="flex flex-col items-center gap-3 py-4">
+            {NavbarMenu.map((menu) => (
+              <li key={menu.id}>
+                <a
+                  href={menu.path}
+                  className="block py-2 px-3 hover:text-secondary"
+                  onClick={() => setIsMobileMenuOpen(false)} // Close menu on click
+                >
+                  {menu.title}
+                </a>
+              </li>
+            ))}
+            <a href="/feedback">
+              <button
+                className="primary-btn"
+                onClick={() => setIsMobileMenuOpen(false)} // Close menu on click
+              >
+                Get In Touch
+              </button>
+            </a>
+          </ul>
+        </motion.div>
+      )}
     </nav>
   );
 };

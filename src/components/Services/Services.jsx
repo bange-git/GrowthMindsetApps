@@ -6,50 +6,54 @@ import { IoMdHappy } from "react-icons/io";
 import { BiSupport } from "react-icons/bi";
 import { IoPulseOutline } from "react-icons/io5";
 import { motion } from "motion/react";
+import { RiDoubleQuotesL } from "react-icons/ri";
+import { ImBooks } from "react-icons/im";
+import { FaBible } from "react-icons/fa";
+import { FaRegGrinStars } from "react-icons/fa";
 
 const ServicesData = [
   {
     id: 1,
-    title: "Web Development",
+    title: "1000+ book summaries",
     link: "#",
-    icon: <TbWorldWww />,
+    icon: <ImBooks />    ,
     delay: 0.2,
   },
   {
     id: 2,
-    title: "Mobile development",
+    title: "100,000+ Quotes & Affirmations",
     link: "#",
-    icon: <CiMobile3 />,
+    icon: <RiDoubleQuotesL />,
     delay: 0.3,
   },
   {
     id: 3,
-    title: "Software development",
+    title: "Bible verses & 200+ Quizzes",
     link: "#",
-    icon: <RiComputerLine />,
+    icon: <FaBible />,
     delay: 0.4,
   },
   {
     id: 4,
-    title: "Satisfied clients",
+    title: "4.8 Global Average Rating",
     link: "#",
-    icon: <IoMdHappy />,
+    icon: <FaRegGrinStars />,
     delay: 0.5,
   },
-  {
-    id: 5,
-    title: "SEO optimization",
-    link: "#",
-    icon: <IoPulseOutline />,
-    delay: 0.6,
-  },
-  {
-    id: 6,
-    title: "24/7 support",
-    link: "#",
-    icon: <BiSupport />,
-    delay: 0.7,
-  },
+  // {
+  //   id: 5,
+  //   title: "SEO optimization",
+  //   link: "#",
+  //   icon: <IoPulseOutline />,
+  //   delay: 0.6,
+  // },
+  // {
+  //   id: 6,
+  //   title: "24/7 support",
+  //   link: "#",
+  //   icon: <BiSupport />,
+  //   delay: 0.7,
+  // },
 ];
 
 const SlideLeft = (delay) => {
@@ -73,10 +77,10 @@ const Services = () => {
   return (
     <section className="bg-white">
       <div className="container pb-14 pt-16">
-        <h1 className="text-4xl font-bold text-left pb-10">
+        {/* <h1 className="text-4xl font-bold text-left pb-10">
           Services we provide
-        </h1>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8">
+        </h1> */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 justify-center">
           {ServicesData.map((service) => (
             <motion.div
               variants={SlideLeft(service.delay)}

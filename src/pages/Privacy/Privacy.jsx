@@ -11,7 +11,7 @@ function Privacy() {
           Application Privacy Policy
         </h1>
         <h4 className="text-lg font-poppins text-center pb-10">
-          Last updated December 29, 2024
+          Last updated January 5th, 2025
         </h4>
         <p className="text-dark2 text-center font-light">
           These Terms and Conditions regulate the download, access, and use of
@@ -205,7 +205,7 @@ function Privacy() {
           <p className="font-light ">
             If you have any questions regarding privacy while using the
             Application, or have questions about the practices, please contact
-            the Service Provider via email at sebastienbange@gmail.com.
+            the Service Provider <a className="" href="/feedback"><button className="primary-btn">here</button></a> or send email via sebastienbange@gmail.com.
           </p>
         </section>
       </div>

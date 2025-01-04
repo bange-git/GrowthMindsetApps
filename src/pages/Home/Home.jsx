@@ -1,10 +1,12 @@
 import React from "react";
 import Hero from "../../components/Hero/Hero";
 import Services from "../../components/Services/Services";
-import Banner from "../../components/Banner/Banner";
-import Subscribe from "../../components/Subscribe/Subscribe";
-import Banner2 from "../../components/Banner/Banner2";
 import Footer from "../../components/Footer/Footer";
+import BannerReadbay from "../../components/Banner/BannerReadbay";
+import BannerQuote from "../../components/Banner/BannerQuote";
+import BannerBible from "../../components/Banner/BannerBible";
+import BannerAffirm from "../../components/Banner/BannerAffirm";
+import ContactForm from "../../components/Banner/ContactForm";
 
 
 const Home = () => {
@@ -12,9 +14,11 @@ const Home = () => {
     <main className="overflow-x-hidden bg-white text-dark">
       <Hero />
       <Services />
-      <Banner />
-      <Subscribe />
-      <Banner2 />
+      <BannerReadbay />
+      <BannerQuote />
+      <BannerBible />
+      <BannerAffirm />
+      <ContactForm />
       <Footer />
     </main>
   );
