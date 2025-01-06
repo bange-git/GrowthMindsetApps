@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import Blob from "../../assets/blob.svg";
-import HeroImg from "../../assets/herofin.png";
+//import HeroImg from "../../assets/herofin.png";
+import HeroImg from "../../assets/hero.png";
 import { animate, motion } from "motion/react";
 
 export const FadeUp = (delay) => {

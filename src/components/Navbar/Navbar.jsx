@@ -34,7 +34,9 @@ const Navbar = () => {
       >
         {/* Logo section */}
         <div>
+          <a href="/">
           <h1 className="font-bold text-2xl">Growth Mindset</h1>
+          </a>
         </div>
 
         {/* Desktop Menu */}
