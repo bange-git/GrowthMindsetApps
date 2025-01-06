@@ -33,11 +33,13 @@ const Navbar = () => {
         className="container py-6 flex justify-between items-center"
       >
         {/* Logo section */}
-        <div>
-          <a href="/">
-          <h1 className="font-bold text-2xl">Growth Mindset</h1>
-          </a>
-        </div>
+
+        <a href="/">
+          <div className="flex flex-row items-center justify-center gap-2">
+            <img src="/logo.svg" width={20} height={20} />
+            <h1 className="font-bold text-2xl">Growth Mindset</h1>
+          </div>
+        </a>
 
         {/* Desktop Menu */}
         <div className="hidden lg:block">
